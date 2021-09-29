@@ -43,8 +43,6 @@ services:
             POSTGRES_USER: localuser
             POSTGRES_PASSWORD: CHANGE_ME
             PGDATA: /data/db
-        ports:
-            - 5432:5432
         volumes:
             - ./data:/data/db
         healthcheck:
@@ -56,8 +54,6 @@ services:
     redis:
         image: redis:6.0.6-alpine
         container_name: redis
-        ports:
-            - 6379:6379
         command: ["redis-server", "--appendonly", "yes"]
         volumes:
             - redis-data:/data
