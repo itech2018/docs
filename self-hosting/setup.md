@@ -1,7 +1,7 @@
 # Setup
 
 {% hint style="warning" %}
-Make sure to change the appropriate variables \(keys, password, etc...\)
+Make sure to change the appropriate variables (keys, password, etc...)
 {% endhint %}
 
 ## Setup your docker-compose
@@ -12,7 +12,7 @@ Create a file called `docker-compose.yml` in an empty folder with the following 
 version: "2.4"
 services:
     api:
-        image: radiopanel/radiopanel-api:1.0.0-rc.2
+        image: radiopanel/radiopanel-api:1.0.0-rc.14
         container_name: radiopanel-api
         volumes:
             - ./uploads:/home/node/uploads:delegated
@@ -23,7 +23,7 @@ services:
                 condition: service_healthy
 
     app:
-        image: radiopanel/radiopanel-app:1.0.0-rc.2
+        image: radiopanel/radiopanel-app:1.0.0-rc.14
         container_name: radiopanel-app
         volumes:
             - ./certbot/conf:/etc/letsencrypt
@@ -104,4 +104,3 @@ REDIS_PORT=6379
 ## Start radiopanel
 
 Now use the command `docker-compose up -d` and visit your domain to continue the installation
-
