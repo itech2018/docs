@@ -23,15 +23,15 @@
 * [Endpoints](api/endpoints/README.md)
   * [Slots](api/endpoints/slots.md)
 * [Examples](api/examples/README.md)
-  * [JavaScript](api/examples/javascript.md)
-  * [Python](api/examples/python.md)
+  * [JavaScript](api-examples/javascript.md)
+  * [Python](api-examples/python.md)
 
 ## FAQ & Common Errors
 
 * [FAQ](faq-and-common-errors/faq/README.md)
   * [How to update RadioPanel?](faq-and-common-errors/faq/how-to-update-radiopanel.md)
-* [Common Errors](faq-and-common-errors/common-errors/README.md)
-  * [Uploading Files & Images](faq-and-common-errors/common-errors/uploading-files-and-images.md)
+* [Common Errors](self-hosting/common-errors/README.md)
+  * [Uploading Files & Images](self-hosting/common-errors/uploading-files-and-images.md)
 
 ## API Endpoints (Legacy Docs) <a href="#api-endpoints" id="api-endpoints"></a>
 
