@@ -20,7 +20,7 @@ Make sure to change the appropriate variables (keys, password, etc...)
 version: "2.4"
 services:
     api:
-        image: radiopanel/radiopanel-api:1.0.0-rc.14
+        image: radiopanel/radiopanel-api:1.0.0-rc.15
         container_name: radiopanel-api
         volumes:
             - ./uploads:/home/node/uploads:delegated
@@ -31,7 +31,7 @@ services:
                 condition: service_healthy
 
     app:
-        image: radiopanel/radiopanel-app:1.0.0-rc.14
+        image: radiopanel/radiopanel-app:1.0.0-rc.15
         container_name: radiopanel-app
         volumes:
             - ./certbot/conf:/etc/letsencrypt
