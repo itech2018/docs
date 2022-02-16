@@ -1,44 +1,28 @@
 # Song History
 
-{% api-method method="get" host="https://api.radiopanel.co" path="/api/v1/song-history" %}
-{% api-method-summary %}
-Song history
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.radiopanel.co" path="/api/v1/song-history" method="get" summary="Song history" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="header" name="x-tenant" type="string" %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="x-tenant" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="authorization" type="string" %}
 
-{% api-method-parameter name="authorization" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="pagesize" type="number" required=false %}
+{% swagger-parameter in="query" name="pagesize" type="number" %}
 Size of the page
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page" type="number" required=false %}
+{% swagger-parameter in="query" name="page" type="number" %}
 Page nr
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
     "_embedded": [
         {
@@ -161,8 +145,5 @@ Page nr
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

@@ -1,34 +1,20 @@
 # Later slot
 
-{% api-method method="get" host="https://api.radiopanel.co" path="/api/v1/slots/later" %}
-{% api-method-summary %}
-Get a later slot
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.radiopanel.co" path="/api/v1/slots/later" method="get" summary="Get a later slot" %}
+{% swagger-description %}
 This endpoint will return the slot after the next slot, not per se the slot in the next 2 hours
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="x-tenant" type="string" required=true %}
+{% swagger-parameter in="header" name="x-tenant" type="string" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="authorization" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
     "uuid": "7a751c6b-7b77-40e9-b8a1-979fa625d330",
     "title": "New slot",
@@ -71,18 +57,10 @@ This endpoint will return the slot after the next slot, not per se the slot in t
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=204 %}
-{% api-method-response-example-description %}
-Empty body if there is no later slot
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="204" description="Empty body if there is no later slot" %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+```
+{% endswagger-response %}
+{% endswagger %}

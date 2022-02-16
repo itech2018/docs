@@ -1,34 +1,20 @@
 # Currently Playing
 
-{% api-method method="get" host="https://api.radiopanel.co" path="/api/v1/song-history/now-playing" %}
-{% api-method-summary %}
-Currently Playing
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.radiopanel.co" path="/api/v1/song-history/now-playing" method="get" summary="Currently Playing" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="header" name="x-tenant" type="string" %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="x-tenant" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="authorization" type="string" %}
 
-{% api-method-parameter name="authorization" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
     "createdAt": "2020-11-03T15:11:16.911Z",
     "song": {
@@ -49,8 +35,5 @@ Currently Playing
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

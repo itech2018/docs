@@ -1,12 +1,16 @@
-# Setup
+---
+description: How to install RadioPanel via Docker.
+---
+
+# Installing RadioPanel
+
+### Step 1: Setting Up docker-compose.yaml
+
+Create a new file called `docker-compose.yaml` within an empty directory and load in the following content.
 
 {% hint style="warning" %}
 Make sure to change the appropriate variables (keys, password, etc...)
 {% endhint %}
-
-## Setup your docker-compose
-
-Create a file called `docker-compose.yml` in an empty folder with the following content
 
 ```yaml
 version: "2.4"
@@ -63,12 +67,12 @@ volumes:
 ```
 
 {% hint style="info" %}
-Once postgres is started once with the `POSTGRES_PASSWORD`set, you can not change the password again
+Once postgres is started once with the `POSTGRES_PASSWORD`set, you can not change the password again!
 {% endhint %}
 
-## Create a env file
+### Step 2: Setting Up .env
 
-In the same folder create a `.env` file with the following content and change the needed variables:
+In the same directory create a `.env` file with the following content and change the needed variables:
 
 ```yaml
 PORT=80
@@ -101,6 +105,6 @@ REDIS_HOST=redis
 REDIS_PORT=6379
 ```
 
-## Start radiopanel
+### Step 3: Starting RadioPanel
 
-Now use the command `docker-compose up -d` and visit your domain to continue the installation
+Now use the command `docker-compose up -d` and visit your domain to continue the installation. It can take up to 5 minutes for RadioPanel to setup.

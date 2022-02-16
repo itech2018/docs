@@ -4,35 +4,21 @@ description: Get banners for your radio's website.
 
 # Banner List
 
-{% api-method method="get" host="https://api.radiopanel.co" path="/api/v1/banners" %}
-{% api-method-summary %}
-Get the banner list
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.radiopanel.co" path="/api/v1/banners" method="get" summary="Get the banner list" %}
+{% swagger-description %}
 Get the list of banners
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-Tenant" type="string" required=true %}
+{% swagger-parameter in="header" name="X-Tenant" type="string" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Banner found and returned
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="Banner found and returned" %}
+```
 {
   "_embedded": [
     {
@@ -54,14 +40,10 @@ Banner found and returned
   }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=204 %}
-{% api-method-response-example-description %}
-No banners found
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="204" description="No banners found" %}
+```
 {
   "_embedded": [
 
@@ -73,8 +55,5 @@ No banners found
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

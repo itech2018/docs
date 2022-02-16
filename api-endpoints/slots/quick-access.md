@@ -1,44 +1,28 @@
 # Get multiple slots
 
-{% api-method method="get" host="https://api.radiopanel.co" path="/api/v1/slots" %}
-{% api-method-summary %}
-List slots
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.radiopanel.co" path="/api/v1/slots" method="get" summary="List slots" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="header" name="x-tenant" type="string" %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="x-tenant" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="authorization" type="string" %}
 
-{% api-method-parameter name="authorization" type="string" required=true %}
+{% endswagger-parameter %}
 
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="beforeDate" type="number" required=false %}
+{% swagger-parameter in="query" name="beforeDate" type="number" %}
 UNIX timestamp
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="afterDate" type="number" required=false %}
+{% swagger-parameter in="query" name="afterDate" type="number" %}
 UNIX timestamp
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
     "_embedded": [
         {
@@ -88,8 +72,5 @@ UNIX timestamp
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}
