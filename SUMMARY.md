@@ -29,7 +29,7 @@
 ## FAQ & Common Errors
 
 * [FAQ](faq-and-common-errors/faq/README.md)
-  * [Coming Soon](faq-and-common-errors/faq/coming-soon.md)
+  * [How to update RadioPanel?](faq-and-common-errors/faq/how-to-update-radiopanel.md)
 * [Common Errors](self-hosting/common-errors/README.md)
   * [Uploading Files & Images](self-hosting/common-errors/uploading-files-and-images.md)
 
