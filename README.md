@@ -2,7 +2,7 @@
 description: Welcome to the RadioPanel Documentation.
 ---
 
-# Welcome
+# Welcome!
 
 ### What is RadioPanel?
 
