@@ -27,4 +27,3 @@ fetch('https://api.radiopanel.co/api/v1/slots/live', {
         document.querySelector('.dj-avatar').src = "LINK_TO_DEFAULT_AVATAR";
     });
 ```
-

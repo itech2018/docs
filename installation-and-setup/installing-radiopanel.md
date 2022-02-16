@@ -4,6 +4,10 @@ description: How to install RadioPanel via Docker.
 
 # Installing RadioPanel
 
+{% hint style="info" %}
+Make sure you have docker installed before setting up radiopanel: [https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
+{% endhint %}
+
 ### Step 1: Setting Up docker-compose.yaml
 
 Create a new file called `docker-compose.yaml` within an empty directory and load in the following content.
