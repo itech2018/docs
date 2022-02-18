@@ -11,8 +11,7 @@ description: >-
 ```python
 import requests
 headers = {
-    "Authorization": "YOUR_AUTHORIZATION_HEADER",
-    "X-Tenant": "YOUR_TENANT_UUID"
+    "Authorization": "YOUR_AUTHORIZATION_HEADER"
 }
 
 j = requests.get("https://api.radiopanel.co/api/v1/slots/live", headers=headers)
@@ -23,7 +22,7 @@ if j.text == "":
 else:
     # This function gets triggered when someone is live.
     json = j.json()
-    t = str(json["user"]["firstName"])
+    t = str(json["user"]["username"])
 ```
 
 Thanks to Destinyyy#4581 for this example
