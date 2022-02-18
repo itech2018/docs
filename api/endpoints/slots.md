@@ -9,11 +9,11 @@ description: All API Endpoints Related to Slots
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="beforeDate " type="String" %}
+{% swagger-parameter in="query" name="beforeDate " type="String" required="false" %}
 A UNIX Timestamp
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="afterDate" type="Strig" %}
+{% swagger-parameter in="query" name="afterDate" type="Strig" required="false" %}
 A UNIX Timestamp
 {% endswagger-parameter %}
 
@@ -155,6 +155,186 @@ Authorisation Header that allowed you to access the RadioPanel API
       "createdAt":"2022-02-15T12:07:02.398Z"
    }
 }
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/slots/live" baseUrl="https://example.com" summary="Get the Live Slot" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="authorisation" type="String" required="true" %}
+Authorisation Header that allowed you to access the RadioPanel API
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Slot Found" %}
+```javascript
+{
+    "uuid": "7a751c6b-7b77-40e9-b8a1-979fa625d330",
+    "title": "New slot",
+    "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+    "userUuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+    "slotTypeUuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+    "start": 1604415600,
+    "end": 1604419200,
+    "recurring": false,
+    "updatedAt": "2020-11-03T15:25:55.903Z",
+    "createdAt": "2020-11-03T15:25:55.903Z",
+    "slotType": {
+        "uuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+        "name": "Podcast",
+        "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+        "description": "Podcast show",
+        "color": "#b80000",
+        "updatedAt": "2020-06-25T18:08:44.779Z",
+        "createdAt": "2020-06-25T18:08:44.779Z"
+    },
+    "user": {
+        "uuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+        "username": "Felikx"
+        "avatar": "https://radiopanel.s3.nl-ams.scw.cloud/c9a65443-eed1-41ed-b9d2-743223b5ee75/bcab441c-88a4-4198-8d5d-cee0d6852a6c.png",
+        "bio": "Radiopanel Developer",
+        "email": "hidden",
+        "password": "hidden",
+        "updatedAt": "2020-05-16T13:42:38.142Z",
+        "admin": true,
+        "createdAt": "2020-05-16T13:42:38.142Z",
+        "socials": {
+            "twitch": "",
+            "discord": "",
+            "twitter": "https://twitter.com/FelikxVanSaet",
+            "youtube": "",
+            "facebook": "",
+            "instagram": ""
+        }
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="204: No Content" description="Slot Not Found" %}
+```javascript
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/slots/" baseUrl="" summary="Get the Next Available Slot" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="authorisation" type="String" required="true" %}
+Authorisation Header that allowed you to access the RadioPanel API
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "uuid": "7a751c6b-7b77-40e9-b8a1-979fa625d330",
+    "title": "New slot",
+    "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+    "userUuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+    "slotTypeUuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+    "start": 1604415600,
+    "end": 1604419200,
+    "recurring": false,
+    "updatedAt": "2020-11-03T15:25:55.903Z",
+    "createdAt": "2020-11-03T15:25:55.903Z",
+    "slotType": {
+        "uuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+        "name": "Podcast",
+        "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+        "description": "Podcast show",
+        "color": "#b80000",
+        "updatedAt": "2020-06-25T18:08:44.779Z",
+        "createdAt": "2020-06-25T18:08:44.779Z"
+    },
+    "user": {
+        "uuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+        "username": "Felikx",
+        "avatar": "https://radiopanel.s3.nl-ams.scw.cloud/c9a65443-eed1-41ed-b9d2-743223b5ee75/bcab441c-88a4-4198-8d5d-cee0d6852a6c.png",
+        "bio": "Radiopanel Developer",
+        "email": "hidden",
+        "password": "hidden",
+        "updatedAt": "2020-05-16T13:42:38.142Z",
+        "admin": true,
+        "createdAt": "2020-05-16T13:42:38.142Z",
+        "socials": {
+            "twitch": "",
+            "discord": "",
+            "twitter": "https://twitter.com/FelikxVanSaet",
+            "youtube": "",
+            "facebook": "",
+            "instagram": ""
+        }
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="204: No Content" description="Slot Not Found" %}
+```javascript
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="get" path="/api/v1/slots/later" baseUrl="https://example.com" summary="Get the Next Available Slot after Next" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="authorisation" type="String" required="true" %}
+Authorisation Header that allowed you to access the RadioPanel API
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    "uuid": "7a751c6b-7b77-40e9-b8a1-979fa625d330",
+    "title": "New slot",
+    "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+    "userUuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+    "slotTypeUuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+    "start": 1604415600,
+    "end": 1604419200,
+    "recurring": false,
+    "updatedAt": "2020-11-03T15:25:55.903Z",
+    "createdAt": "2020-11-03T15:25:55.903Z",
+    "slotType": {
+        "uuid": "90731312-6a6e-4e75-8856-42a67f65b2f2",
+        "name": "Podcast",
+        "tenantUuid": "141bc871-f1e5-44b9-98f7-59fd1e31faea",
+        "description": "Podcast show",
+        "color": "#b80000",
+        "updatedAt": "2020-06-25T18:08:44.779Z",
+        "createdAt": "2020-06-25T18:08:44.779Z"
+    },
+    "user": {
+        "uuid": "d7facb17-6012-48d3-b560-d039b5f043c7",
+        "username": "Felikx",
+        "avatar": "https://radiopanel.s3.nl-ams.scw.cloud/c9a65443-eed1-41ed-b9d2-743223b5ee75/bcab441c-88a4-4198-8d5d-cee0d6852a6c.png",
+        "bio": "Radiopanel Developer",
+        "email": "hidden",
+        "password": "hidden",
+        "updatedAt": "2020-05-16T13:42:38.142Z",
+        "admin": true,
+        "createdAt": "2020-05-16T13:42:38.142Z",
+        "socials": {
+            "twitch": "",
+            "discord": "",
+            "twitter": "https://twitter.com/FelikxVanSaet",
+            "youtube": "",
+            "facebook": "",
+            "instagram": ""
+        }
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="204: No Content" description="Slot Not Found" %}
+```javascript
 ```
 {% endswagger-response %}
 {% endswagger %}
