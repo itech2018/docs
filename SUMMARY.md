@@ -8,7 +8,7 @@
 * [Configuring RadioPanel](installation-and-setup/configuring-radiopanel.md)
 * [Setting Up RadioPanel](installation-and-setup/setting-up-radiopanel/README.md)
   * [Setting Up Roles](installation-and-setup/setting-up-radiopanel/setting-up-roles.md)
-  * [Setting Up Roles](installation-and-setup/setting-up-radiopanel/setting-up-roles-1.md)
+  * [Setting Up Users](installation-and-setup/setting-up-radiopanel/setting-up-roles-1.md)
   * [Setting Up Slot Types](installation-and-setup/setting-up-radiopanel/setting-up-slot-types.md)
   * [Setting Up Webhooks](installation-and-setup/setting-up-radiopanel/setting-up-webhooks.md)
   * [Setting Up API keys](installation-and-setup/setting-up-radiopanel/setting-up-api-keys.md)

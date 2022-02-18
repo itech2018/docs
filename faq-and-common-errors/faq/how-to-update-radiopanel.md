@@ -4,12 +4,10 @@
 
 In your `docker-compose.yaml` file, edit the images for `app` and `api`.
 
-
-
 The latest images are:
 
-* `api`: `radiopanel/radiopanel-api:1.0.0-rc.16`
-* `app`: `radiopanel/radiopanel-app:1.0.0-rc.16`
+* `api`: `radiopanel/radiopanel-api:1.0.0-rc.18`
+* `app`: `radiopanel/radiopanel-app:1.0.0-rc.18`
 
 ### Step Two: Restart your Docker containers
 

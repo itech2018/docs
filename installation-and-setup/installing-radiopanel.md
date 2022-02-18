@@ -20,7 +20,7 @@ Make sure to change the appropriate variables (keys, password, etc...)
 version: "2.4"
 services:
     api:
-        image: radiopanel/radiopanel-api:1.0.0-rc.16
+        image: radiopanel/radiopanel-api:1.0.0-rc.18
         container_name: radiopanel-api
         volumes:
             - ./uploads:/home/node/uploads:delegated
@@ -31,7 +31,7 @@ services:
                 condition: service_healthy
 
     app:
-        image: radiopanel/radiopanel-app:1.0.0-rc.16
+        image: radiopanel/radiopanel-app:1.0.0-rc.18
         container_name: radiopanel-app
         volumes:
             - ./certbot/conf:/etc/letsencrypt
@@ -116,7 +116,7 @@ REDIS_PORT=6379
 * `DOMAIN` should be the domain your RadioPanel instance will be accessible on. This is used for certificate provisioning via [Lets Encrypt](https://letsencrypt.org). For localhost installs, set this to `localhost`
 * `FRONTEND_BASEURL` should be set to the actual web address your RadioPanel instance will be accessible on, including the protocol. For localhost installs, set this to `http://localhost:[port]`
 * `TYPEORM_PASSWORD` must match the value of `POSTGRES_PASSWORD` specified earlier in the `docker-compose.yml` file
-* The `MAIL_` variables are used as settings so RadioPanel can send emails to users.  You can use your own mail server, or even send emails from your own email address through your email provider's SMTP services.
+* The `MAIL_` variables are used as settings so RadioPanel can send emails to users. You can use your own mail server, or even send emails from your own email address through your email provider's SMTP services.
   * `MAIL_HOST` and `MAIL_PORT`should be set to the SMTP server hostname and port respectively
     * Common ports include **25**, **465** and **587** depending on the service.
   * `MAIL_SECURE` should be set to `true` or `false` based on whether to use SSL/TLS
